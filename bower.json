@@ -1,0 +1,21 @@
+{
+  "name": "fling-angular-ui-router",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nakana/fling-angular-ui-router",
+  "authors": [
+    "nakana <t-nakanishi@esm.co.jp>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular-material": "~0.10.0",
+    "node-uuid": "~1.4.3"
+  }
+}
