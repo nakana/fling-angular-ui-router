@@ -18,6 +18,18 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router'])
 	    onExit: function(){
 		console.log('EXIT!!');
 	    }
+	}).state('state0hoge', {
+	    url: '/state0?hoge',
+	    template: '<h1>State0 HOGE {{hoge}}</h1>',
+	    controller: function($scope, $stateParams){
+		$scope.hoge = $stateParams.hoge;
+	    },
+	    onEnter: function(){
+		console.log('STATE0 HOGE ENTER!!');
+	    },
+	    onExit: function(){
+		console.log('STATE0 HOGE EXIT!!');
+	    }
 	}).state('state2', {
 	    url: '/state2',
 	    template: '<h1>State2</h1>',
