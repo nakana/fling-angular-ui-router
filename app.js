@@ -36,7 +36,7 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router'])
 	    onEnter: function(){
 		console.log('PROFILE!!');
 		window.location.href = 'http://localhost:3000/profile.html';
-	    }	    
+	    }
 	})
 	;
 })
@@ -49,15 +49,18 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router'])
     sessionStorage.clear();
     sessionStorage.setItem('viewModel', JSON.stringify([$scope.viewModel]));
     $scope.save = function(){
-	var data = JSON.parse(sessionStorage.getItem('viewModel'));
-	data.push($scope.viewModel);
-	sessionStorage.setItem('viewModel', JSON.stringify(data));
+    	var data = JSON.parse(sessionStorage.getItem('viewModel'));
+    	data.push($scope.viewModel);
+    	sessionStorage.setItem('viewModel', JSON.stringify(data));
+
+    	// TODO TEST
+    	saveViewModel(uuid.v4(), $scope.viewModel);
     };
     $scope.debug = function(){
 	//	console.log($scope.viewModel);
 	var data = JSON.parse(sessionStorage.getItem('viewModel'));
 	console.log(data);
-	
+
     };
     $scope.reset = function(){
 	$scope.viewModel = {
@@ -77,7 +80,7 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router'])
 	console.log(toParams);
 	console.log(fromState);
 	console.log(fromParams);
-	
+
     });
     $scope.$watch('viewModel', function(newValue, oldValue, scope){
 	console.log('CHANGE!!!!!');
@@ -86,5 +89,5 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router'])
 	console.log(scope);
 	console.log('CHANGE!!!!!');
     }, true);
-    
+
 }]);
