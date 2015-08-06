@@ -1,3 +1,5 @@
+var passFlg = false;
+
 angular.module('app', ['ngMaterial', 'ui.router'])
     .config(function($stateProvider, $urlRouterProvider, $locationProvider){
 	$locationProvider.html5Mode({
@@ -17,8 +19,19 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 		    return deferred.promise;
 		},
 	    },
-	    controller: function($scope, gijiHTTP){
+	    controller: function($scope, gijiHTTP, $stateParams){
+		console.log($stateParams.id);
+		var vm = loadViewModelById($stateParams.id);
+		console.log(vm);
+		passFlg = true;
+		$scope.viewModel.aaa = vm.aaa;
+		$scope.viewModel.bbb = vm.bbb;
+		$scope.viewModel.ccc = vm.ccc;
+		passFlg = false;
 		$scope.message = gijiHTTP + ';;;aaa(' + $scope.viewModel.aaa + '), bbb(' + $scope.viewModel.bbb + '), ccc(' + $scope.viewModel.ccc + ')';
+	    },
+	    onEnter: function($stateParams){
+		console.log('ONENTER');
 	    },
 	})
 	.state('state2', {
@@ -45,8 +58,10 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 	console.log(uuid.v4());
 	console.log(newValue);
 	console.log(oldValue);
-	if(!angular.equals(oldValue, newValue)){
-	    $state.go('state1', {id:uuid.v4()});
+	if(!angular.equals(oldValue, newValue) && !passFlg){
+	    var uu = uuid.v4();
+	    saveViewModel(uu, newValue);
+	    $state.go('state1', {id:uu});
 	}
     }, true);
     
