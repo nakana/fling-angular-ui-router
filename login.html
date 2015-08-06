@@ -1,0 +1,101 @@
+<html ng-app="StarterApp">
+<head>
+<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+<meta name="viewport" content="initial-scale=1" />
+</head>
+<body layout="column" ng-controller="AppCtrl">
+
+<div layout="column" layout-align="space-around center">
+    <md-content flex style="height:20px;"></md-content>
+    <h1>::::: Libra :::::</h1>
+    <md-content flex style="height:20px;"></md-content>
+</div>
+
+<div layout="column" layout-align="space-around center">
+    <md-content flex>
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <h2 class="md-flex">ユーザーログイン</h2>
+            </div>
+        </md-toolbar>
+        <div layout="row" layout-align="space-around center">
+            <md-content layout-padding>
+                <form name="projectForm">
+                    <md-input-container>
+                        <label>ユーザーID</label>
+                        <input md-maxlength="10" required name="userId" ng-model="project.userId">
+                        <div ng-messages="projectForm.userId.$error">
+                            <div ng-message="required">この項目は必須です。</div>
+                            <div ng-message="md-maxlength">10文字以内で入力してください。</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>パスワード</label>
+                        <input md-maxlength="10" type="password" required name="userPass" ng-model="project.userPass">
+                        <div ng-messages="projectForm.userPass.$error">
+                            <div ng-message="required">この項目は必須です。</div>
+                            <div ng-message="md-maxlength">10文字以内で入力してください。</div>
+                        </div>
+                    </md-input-container>
+                </form>
+                <div>
+                    <a href="#">ユーザー情報を忘れてしまった方はこちら</a>
+                </div>
+            </md-content>
+            <md-content layout="row">
+                <md-button class="md-raised md-primary">ログイン</md-button>
+            </md-content>
+        </div>
+    </md-content>
+    <md-content flex style="height:80px;">
+    </md-content>
+    <md-content flex>
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <h2 class="md-flex">お知らせ</h2>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding style="height: 600px;padding: 24px;" layout="row">
+            <table>
+                <tr>
+                    <td>YYYY/MM/DD</td>
+                    <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+                </tr>
+                <tr>
+                    <td>YYYY/MM/DD</td>
+                    <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+                </tr>
+                <tr>
+                    <td>YYYY/MM/DD</td>
+                    <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+                </tr>
+                <tr>
+                    <td>YYYY/MM/DD</td>
+                    <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+                </tr>
+                <tr>
+                    <td>YYYY/MM/DD</td>
+                    <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+                </tr>
+                <tr>
+                    <td>YYYY/MM/DD</td>
+                    <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+                </tr>
+            </table>
+        </md-content>
+    </md-content>
+</div>
+
+    <!-- Angular Material Dependencies -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/node-uuid/uuid.js"></script>
+    <script src="app.js"></script>
+    <script src="util.js"></script>
+</body>
+</html>
