@@ -49,6 +49,18 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router', 'ngMessages'])
 		console.log('PROFILE!!');
 		window.location.href = 'http://localhost:3000/profile.html';
 	    }
+	}).state('toTop', {
+	    onEnter: function() {
+	        window.location.href = 'top.html';
+        },
+        views: {
+            'header': 'Home'
+        }
+    }).state('toProfile', {
+        onEnter: function() {
+            window.location.href = 'profile.html';
+        },
+        template : 'Home'
 	})
 	;
 })

@@ -19,32 +19,35 @@
                 <h2 class="md-flex">ユーザーログイン</h2>
             </div>
         </md-toolbar>
-        <div layout="row" layout-align="space-around center">
-            <md-content layout-padding>
-                <form name="projectForm">
-                    <md-input-container>
-                        <label>ユーザーID</label>
-                        <input md-maxlength="10" required name="userId" ng-model="project.userId">
-                        <div ng-messages="projectForm.userId.$error">
-                            <div ng-message="required">この項目は必須です。</div>
-                            <div ng-message="md-maxlength">10文字以内で入力してください。</div>
-                        </div>
-                    </md-input-container>
-                    <md-input-container>
-                        <label>パスワード</label>
-                        <input md-maxlength="10" type="password" required name="userPass" ng-model="project.userPass">
-                        <div ng-messages="projectForm.userPass.$error">
-                            <div ng-message="required">この項目は必須です。</div>
-                            <div ng-message="md-maxlength">10文字以内で入力してください。</div>
-                        </div>
-                    </md-input-container>
-                </form>
+        <div layout="column" layout-align="space-between center">
+            <div layout="row" layout-margin>
+                <md-content>
+                    <form name="projectForm">
+                        <md-input-container>
+                            <label>ユーザーID</label>
+                            <input md-maxlength="10" required name="userId" ng-model="project.userId">
+                            <div ng-messages="projectForm.userId.$error">
+                                <div ng-message="required">この項目は必須です。</div>
+                                <div ng-message="md-maxlength">10文字以内で入力してください。</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container>
+                            <label>パスワード</label>
+                            <input ng-maxlength="10" type="password" required name="userPass" ng-model="project.userPass">
+                            <div ng-messages="projectForm.userPass.$error">
+                                <div ng-message="required">この項目は必須です。</div>
+                            </div>
+                        </md-input-container>
+                    </form>
+                </md-content>
+                <md-content layout="column" layout-align="center center" layout-margin>
+                    <md-button class="md-raised md-primary" ui-sref="toTop">ログイン</md-button>
+                </md-content>
+            </div>
+            <md-content flex>
                 <div>
                     <a href="#">ユーザー情報を忘れてしまった方はこちら</a>
                 </div>
-            </md-content>
-            <md-content layout="row">
-                <md-button class="md-raised md-primary">ログイン</md-button>
             </md-content>
         </div>
     </md-content>
@@ -56,7 +59,7 @@
                 <h2 class="md-flex">お知らせ</h2>
             </div>
         </md-toolbar>
-        <md-content layout-padding style="height: 600px;padding: 24px;" layout="row">
+        <md-content layout-padding style="padding: 24px;" layout="row">
             <table>
                 <tr>
                     <td>YYYY/MM/DD</td>
