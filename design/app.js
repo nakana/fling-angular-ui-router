@@ -54,17 +54,23 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router', 'ngMessages'])
 	        window.location.href = 'top.html';
         },
         views: {
-            'header': 'Home'
+            '': {
+            template: "メインメニュー",
+            },
         }
     }).state('toProfile', {
         onEnter: function() {
             window.location.href = 'profile.html';
         },
-        template : 'Home'
-	})
-	;
+        views: {
+            '': {
+            template: "ユーザー設定画面",
+            },
+        }
+	});
+
 })
-.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
+.controller('AppCtrl', ['$scope', '$mdSidenav', '$state', function($scope, $mdSidenav, $state){
     $scope.viewModel = {
 	aaa : false,
 	bbb : false,
@@ -116,5 +122,13 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router', 'ngMessages'])
 
     $scope.openLeftMenu = function() {
         $mdSidenav('left').toggle();
+    };
+
+    $scope.toTop = function() {
+        $state.go('toTop');
+    };
+
+    $scope.toProfile = function() {
+        $state.go('toProfile');
     };
 }]);

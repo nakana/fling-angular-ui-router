@@ -47,39 +47,37 @@
                     XXX会　XXXXXXXXX院　ユーザー設定
                 </md-content>
                 <md-content flex>
-                    <md-button class="md-raised" ui-sref="toTop">戻る</md-button>
-                    <!-- ↓TODO 危険なコード -->
-                    <!-- <md-button class="md-raised" ui-sref="toTop">戻る</md-button> -->
+                    <md-button class="md-raised" ng-click="toTop();">戻る</md-button>
                 </md-content>
             </div>
 
             <div layout="row" layout-align="center center">
-                <div layout="column" flex="50">
-                    <div>
+                <div layout="column" layout-align="right center" flex="20" offset="10" layout-fill>
+                    <div flex>
                         ユーザーID
                     </div>
-                    <div>
+                    <div flex>
                         9999999999
                     </div>
-                    <div>
+                    <div flex>
                         ユーザー名
                     </div>
-                    <div>
+                    <div flex>
                         山田　太郎
                     </div>
-                    <div>
+                    <div flex>
                         パスワード<!-- ←??? -->
                     </div>
-                    <div>
+                    <div flex>
                         ＊＊＊＊＊＊＊＊＊＊
                     </div>
-                    <div>
+                    <div flex>
                         生年月日
                     </div>
-                    <div>
+                    <div flex>
                         9999年　99月　99日
                     </div>
-                    <div>
+                    <div flex>
                         所持している権限
                     </div>
                     <div>
@@ -90,7 +88,7 @@
                         </table>
                     </div>
                 </div>
-                <div layout="column" flex="50">
+                <div layout="column" layout-align="center center" flex offset="50">
                     <div>
                         閲覧
                     </div>
