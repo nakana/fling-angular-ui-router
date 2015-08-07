@@ -1,4 +1,4 @@
-angular.module('StarterApp', ['ngMaterial', 'ui.router'])
+angular.module('StarterApp', ['ngMaterial', 'ui.router', 'ngMessages'])
     .config(function($stateProvider, $urlRouterProvider, $locationProvider){
 	$locationProvider.html5Mode({
 	    enabled: true,
@@ -102,4 +102,7 @@ angular.module('StarterApp', ['ngMaterial', 'ui.router'])
 	console.log('CHANGE!!!!!');
     }, true);
 
+    $scope.openLeftMenu = function() {
+        $mdSidenav('left').toggle();
+    };
 }]);
