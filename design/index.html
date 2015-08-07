@@ -1,0 +1,55 @@
+<html lang="en" ng-app="StarterApp">
+  <head>
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body layout="column" ng-controller="AppCtrl">
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+          <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+        </md-button>
+        <h1>Hello World</h1>
+          <md-button ng-click="save();"> save </md-button>
+	  <md-button ng-click="debug();"> debug </md-button>
+	  <md-button ng-click="reset();"> reset </md-button>
+      </div>
+    </md-toolbar>
+    <!-- hogehoge -->
+    <div layout="row" flex>
+      <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+	<a href="/design/state0?hoge=a">HOGE state0a</a>
+	<a href="/design/state0?hoge=b">HOGE state0b</a>
+	<a ui-sref="state1">state1</a>
+	<a ui-sref="state2">state2</a>
+	<a ui-sref="state1({id:a})">state1a</a>
+	<a ui-sref="state1({id:b})">state1b</a>
+	<a href="/design/state2/a">HREF state2a</a>
+	<a href="/design/state2/b">HREF state2b</a>
+	<a href="/design/profile.html">PROFILE</a>
+	<a href="https://www.google.co.jp">google</a>
+	<a href="/design/s3/5">state3(5)</a>
+	<a href="/design/s3/7">state3(7)</a>
+      </md-sidenav>
+      <div layout="column" flex id="content">
+        <md-content layout="column" flex class="md-padding">
+	  <div ui-view></div>
+          <md-checkbox ng-model="viewModel.aaa">aaa</md-checkbox>
+	  <md-checkbox ng-model="viewModel.bbb">bbb</md-checkbox>
+	  <md-checkbox ng-model="viewModel.ccc">ccc</md-checkbox>
+        </md-content>
+      </div>
+    </div>
+    <!-- Dependencies -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/node-uuid/uuid.js"></script>
+    <script src="app.js"></script>
+    <script src="util.js"></script>
+  </body>
+</html>

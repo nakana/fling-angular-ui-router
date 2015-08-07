@@ -1,0 +1,35 @@
+<div layout="colmun" flex>
+
+    <div style="width:50px;"></div> <!-- spacerとして利用している -->
+    <span layout-align="center center"><h1>SDB</h1></span>
+    <div style="width:50px;"></div> <!-- spacerとして利用している -->
+
+    <div layout="column" layout-align="space-around center">
+        <div layout="row" layout-align="space-between center" style="max-height: 70px;" layout-margin layout-fill layout-padding>
+            <div flex>
+                <span class="md-title" style="max-width: 700px; font-weight: bolder;">神田鍛冶町病院</span>
+            </div>
+            <div flex layout="row">
+                <md-icon md-svg-src="images/common/icon/ic_account_box_white_24px.svg"></md-icon>
+                <md-button ng-click=";">
+                    <span>山田 太郎</span>
+                    <md-icon md-svg-src="images/common/icon/ic_settings_white_24px.svg"></md-icon>
+                </md-button>
+            </div>
+        </div>
+        <div layout="row" layout-align="space-between center" layout-margin layout-fill layout-padding>
+            <div>
+                <md-button ng-click="openLeftMenu();">
+                    <md-icon md-svg-src="images/common/icon/ic_menu_white_24px.svg"></md-icon>
+                </md-button>
+            </div>
+            <span class="md-body-1" style="min-width: 250px;" >メインメニュー</span>
+            <div>
+                <md-button ng-click=";">
+                    <md-icon md-svg-src="images/common/icon/ic_help_outline_white_24px.svg"></md-icon>
+                </md-button>
+            </div>
+        </div>
+    </div>
+</div>
+
