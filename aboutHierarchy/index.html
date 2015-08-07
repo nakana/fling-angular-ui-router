@@ -17,7 +17,7 @@
     <div layout="row" flex>
       <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
 	<a ui-sref="state1">state1</a>
-	<a ui-sref="state1({id:10})">state1 uuid</a>
+	<a ui-sref="state1.a({id:10})">state1 uuid</a>
 	<a ui-sref="state2">state2</a>
       </md-sidenav>
       <div layout="column" flex id="content">
@@ -26,13 +26,6 @@
         </md-content>
       </div>
 
-      <md-sidenav layout="column" class="md-sidenav-right md-whiteframe-z2" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
-          <md-checkbox ng-model="viewModel.aaa">aaa</md-checkbox>
-	  <md-checkbox ng-model="viewModel.bbb">bbb</md-checkbox>
-	  <md-checkbox ng-model="viewModel.ccc">ccc</md-checkbox>
-      </md-sidenav>
-
-      
     </div>
     <!-- Dependencies -->
     <script src="/bower_components/angular/angular.min.js"></script>

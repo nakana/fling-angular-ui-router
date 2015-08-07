@@ -30,15 +30,4 @@ angular.module('app', ['ngMaterial', 'ui.router'])
     $scope.toggleSidenav = function(menuId) {
 	$mdSidenav(menuId).toggle();
     };
-
-    $scope.$watch('viewModel', function(newValue, oldValue, scope){
-	console.log('VIEW MODEL CHANGE!!');
-	console.log(uuid.v4());
-	console.log(newValue);
-	console.log(oldValue);
-	$state.go('state1.a', {id:uuid.v4()}); //OK
-//	$state.go('state1({id:29})'); //NG
-//	$state.go('state1');
-    }, false);
-    
 });
