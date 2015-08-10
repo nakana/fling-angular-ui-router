@@ -6,7 +6,7 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 	});
 	$stateProvider
 	    .state('prod', {
-		url: '/aboutHierarchy2/prod',
+		url: '/aboutHierarchy2/prod/',
 		views: {
 		    'left-menu': {
 			templateUrl: 'prod-menu.html',
@@ -27,8 +27,19 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 		    },
 		}
 	    })
+	    .state('prod.rad', {
+		url: 'rad',
+		views: {
+		    'ana-menu@': {
+			templateUrl: 'rad-menu.html',
+		    },
+		    '@': {
+			template: "<h1>RAD</h1>",
+		    },
+		}
+	    })
 	    .state('prod.doc', {
-		url: '/doc',
+		url: 'doc',
 		views: {
 		    'ana-menu@': {
 			templateUrl: 'doc-menu.html',
