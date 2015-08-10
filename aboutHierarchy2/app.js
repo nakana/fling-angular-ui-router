@@ -16,6 +16,17 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 		    },
 		}
 	    })
+	    .state('prod.doc', {
+		url: 'doc',
+		views: {
+		    'ana-menu@': {
+			templateUrl: 'doc-menu.html',
+		    },
+		    '@': {
+			template: "<h1>DOC</h1>",
+		    },
+		}
+	    })
 	    .state('prod.nus', {
 		url: '/nus',
 		views: {
@@ -35,17 +46,6 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 		    },
 		    '@': {
 			template: "<h1>RAD</h1>",
-		    },
-		}
-	    })
-	    .state('prod.doc', {
-		url: 'doc',
-		views: {
-		    'ana-menu@': {
-			templateUrl: 'doc-menu.html',
-		    },
-		    '@': {
-			template: "<h1>DOC</h1>",
 		    },
 		}
 	    })
