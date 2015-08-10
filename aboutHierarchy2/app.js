@@ -6,10 +6,10 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 	});
 	$stateProvider
 	    .state('prod', {
-		url: '/aboutHierarchy2/prod/',
+		url: '/aboutHierarchy2/analysis/prod',
 		views: {
 		    'left-menu': {
-			templateUrl: 'prod-menu.html',
+			templateUrl: '/aboutHierarchy2/views/analysis/prod-menu.html',
 		    },
 		    '': {
 			template: "<h1>PROD</h1>",
@@ -17,10 +17,10 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 		}
 	    })
 	    .state('prod.doc', {
-		url: 'doc',
+		url: '/doc',
 		views: {
 		    'ana-menu@': {
-			templateUrl: 'doc-menu.html',
+			templateUrl: '/aboutHierarchy2/views/analysis/prod/doc-menu.html',
 		    },
 		    '@': {
 			template: "<h1>DOC</h1>",
@@ -31,7 +31,7 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 		url: '/nus',
 		views: {
 		    'ana-menu@': {
-			templateUrl: 'nus-menu.html',
+			templateUrl: '/aboutHierarchy2//views/analysis/prod/nus-menu.html',
 		    },
 		    '@': {
 			template: "<h1>NUS</h1>",
@@ -39,13 +39,24 @@ angular.module('app', ['ngMaterial', 'ui.router'])
 		}
 	    })
 	    .state('prod.rad', {
-		url: 'rad',
+		url: '/rad',
 		views: {
 		    'ana-menu@': {
-			templateUrl: 'rad-menu.html',
+			templateUrl: '/aboutHierarchy2/views/analysis/prod/rad-menu.html',
 		    },
 		    '@': {
 			template: "<h1>RAD</h1>",
+		    },
+		}
+	    })
+	    .state('prod.rad.deep', {
+		url: '/deep',
+		views: {
+		    'ana-menu@': {
+			templateUrl: '/aboutHierarchy2/views/analysis/prod/deep-menu.html',
+		    },
+		    '@': {
+			template: "<h1>DEEP</h1>",
 		    },
 		}
 	    })
