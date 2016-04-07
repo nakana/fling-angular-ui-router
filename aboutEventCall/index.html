@@ -1,0 +1,18 @@
+<html lang="jp" ng-app="app">
+  <head>
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css" />
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body ng-controller="AppCtrl">
+    <h1>UI Routerのイベントとコールのテスト</h1>
+    <div ui-view style="border: 1pt solid red;">
+      <button ng-click="goLogin()">ログイン画面へ</button>
+    </div>
+    <!-- Dependencies -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
