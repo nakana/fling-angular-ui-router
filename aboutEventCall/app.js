@@ -18,10 +18,6 @@ angular
       console.log('onExitで20秒待ちます!');
       Sleep(20);
       console.log('onExitで20秒待ちました!');
-//      setTimeout(function(){
-//	console.log('20秒後のonExit');
-//      }, 20000);
-      
     },
   }).state('top', {
     url : '/top',
@@ -30,9 +26,6 @@ angular
       console.log('onEnterで10秒待ちます!');
       Sleep(10);
       console.log('onEneterで10秒待ちました!');
-      // setTimeout(function(){
-      // 	console.log('10秒後のonEnter');
-      // }, 10000);
     },
     resolve : {
       data : function($q){
